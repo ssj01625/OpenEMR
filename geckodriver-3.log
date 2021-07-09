@@ -1,0 +1,10 @@
+1625809073839	geckodriver	INFO	Listening on 127.0.0.1:59901
+1625809076904	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\sdas\\AppData\\Local\\Temp\\rust_mozprofileLJpvO8"
+1625809077436	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sdas\\AppData\\Local\\Temp\\rust_mozprofileLJpvO8\\search.json.mozlz4", (void 0)))
+1625809080893	Marionette	INFO	Listening on port 54256
+1625809081117	Marionette	WARN	TLS certificate errors will be ignored for this session
+1625809084927	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1625809085244	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.

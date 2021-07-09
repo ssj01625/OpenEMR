@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210709 11:19:26.669" rpa="false" schemaversion="2">
+<suite id="s1" name="Verify Valid Credential Tests" source="C:\Users\sdas\Desktop\Framework\OpenEMR\LoginSuite\verify_valid_credential_tests.robot">
+<test id="s1-t1" name="Verify Valid Credential Test">
+<kw name="launch Browser" library="common_functionality" type="SETUP">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<arg>Path</arg>
+<arg>${EXECDIR}\\driver</arg>
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<msg timestamp="20210709 11:19:26.910" level="INFO">Environment variable 'Path' set to value 'C:\Users\sdas\Desktop\Framework\OpenEMR\venv\Scripts;C:\Program Files\Python39\Scripts\;C:\Program Files\Python39\;C:\Users\sdas\Downloads\apache-maven-3.6.2-bin\apache-maven-3.6.2\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Windows\CCM;C:\Program Files (x86)\Webex\Webex\Applications;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Sennheiser\SenncomSDK\;C:\Users\sdas\AppData\Roaming\Python\Python39\site-packages\robot;C:\Users\sdas\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.3\bin;;C:\Users\sdas\Desktop\Framework\OpenEMR\driver'.</msg>
+<status status="PASS" starttime="20210709 11:19:26.909" endtime="20210709 11:19:26.910"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://demo.openemr.io/openemr/interface/login/login.php?site=default</arg>
+<arg>browser=ff</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210709 11:19:26.910" level="INFO">Opening browser 'ff' to base url 'https://demo.openemr.io/openemr/interface/login/login.php?site=default'.</msg>
+<msg timestamp="20210709 11:19:26.911" level="INFO">Firefox driver log is always forced to to: C:\Users\sdas\Desktop\Framework\OpenEMR\geckodriver-5.log</msg>
+<status status="PASS" starttime="20210709 11:19:26.910" endtime="20210709 11:19:36.481"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210709 11:19:36.481" endtime="20210709 11:19:36.769"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20210709 11:19:36.769" endtime="20210709 11:19:36.775"/>
+</kw>
+<status status="PASS" starttime="20210709 11:19:26.909" endtime="20210709 11:19:36.775"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=authUser</arg>
+<arg>admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210709 11:19:36.776" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20210709 11:19:36.776" endtime="20210709 11:19:36.826"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=clearPass</arg>
+<arg>pass</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20210709 11:19:36.827" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20210709 11:19:36.844" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210709 11:19:36.863" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210709 11:19:36.827" endtime="20210709 11:19:36.863"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name=languageChoice</arg>
+<arg>English (Indian)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20210709 11:19:36.864" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
+<status status="PASS" starttime="20210709 11:19:36.864" endtime="20210709 11:19:37.147"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210709 11:19:37.150" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20210709 11:19:37.148" endtime="20210709 11:19:40.574"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Flow Board</arg>
+<arg>50s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210709 11:19:40.575" endtime="20210709 11:19:40.591"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>OpenEMR</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210709 11:19:40.594" level="INFO">Page title is 'OpenEMR'.</msg>
+<status status="PASS" starttime="20210709 11:19:40.592" endtime="20210709 11:19:40.594"/>
+</kw>
+<kw name="End Browser" library="common_functionality">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210709 11:19:40.595" endtime="20210709 11:19:41.470"/>
+</kw>
+<status status="PASS" starttime="20210709 11:19:40.595" endtime="20210709 11:19:41.470"/>
+</kw>
+<kw name="End Browser" library="common_functionality" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210709 11:19:41.471" endtime="20210709 11:19:41.472"/>
+</kw>
+<status status="PASS" starttime="20210709 11:19:41.471" endtime="20210709 11:19:41.472"/>
+</kw>
+<status status="PASS" starttime="20210709 11:19:26.905" endtime="20210709 11:19:41.472"/>
+</test>
+<test id="s1-t2" name="TC2">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Sonali</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210709 11:19:41.474" endtime="20210709 11:19:41.475"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
+<arg>end</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210709 11:19:41.475" endtime="20210709 11:19:41.475"/>
+</kw>
+<status status="PASS" starttime="20210709 11:19:41.474" endtime="20210709 11:19:41.476"/>
+</test>
+<test id="s1-t3" name="TC3">
+<kw name="Log To Console" library="BuiltIn" type="SETUP">
+<arg>start</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210709 11:19:41.478" endtime="20210709 11:19:41.478"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>report</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210709 11:19:41.479" level="INFO">report</msg>
+<status status="PASS" starttime="20210709 11:19:41.479" endtime="20210709 11:19:41.479"/>
+</kw>
+<status status="PASS" starttime="20210709 11:19:41.477" endtime="20210709 11:19:41.479"/>
+</test>
+<doc>This suite will handle all the validations related to
+valid credentials - JIRA ID Number OMR-200</doc>
+<status status="PASS" starttime="20210709 11:19:26.671" endtime="20210709 11:19:41.481"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Verify Valid Credential Tests">Verify Valid Credential Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

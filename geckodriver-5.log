@@ -1,0 +1,16 @@
+1625809766957	geckodriver	INFO	Listening on 127.0.0.1:62456
+1625809770013	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\sdas\\AppData\\Local\\Temp\\rust_mozprofilenX84AF"
+1625809770500	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sdas\\AppData\\Local\\Temp\\rust_mozprofilenX84AF\\search.json.mozlz4", (void 0)))
+1625809773529	Marionette	INFO	Listening on port 50847
+1625809773788	Marionette	WARN	TLS certificate errors will be ignored for this session
+1625809780597	Marionette	INFO	Stopped listening on port 50847
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
